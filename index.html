@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Pet: Seu pet feliz, sua vida mais fácil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="src/assets/svg/logo.svg" alt="Logomarca">
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="diary">
+                <div class="header-form">
+                    <div class="title">
+                        <h1>Sua agenda</h1>
+                        <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+                    </div>
+                    <div class="input">
+                        <img id="focus" src="src/assets/svg/icons/Calendar-Minimalistic--Streamline-Solar.svg" alt="">
+                        <input type="date" name="current-date" id="current-date">
+                        <img src="src/assets/svg/icons/arrow-down.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="list">
+                    <div class="morning list-card">
+                        <div class="header-period">
+                            <img src="src/assets/svg/icons/Sun-Fog--Streamline-Solar.svg" alt="">
+                            <strong>Manhã</strong>
+                            <span>09h-12h</span>
+                        </div>
+                        <ul role="list" id="period-morning" class="clients">
+                            <!-- <li class="client">
+                                <strong>09:00</strong>
+                                <nameAnimal>Thor <namePerson>/ Fernanda Costa</namePerson></nameAnimal>
+                                <span>Vacinação</span>
+                                <a id="delete-schedule" class="delete-schedule" href="#">Remover agendamento</a>
+                            </li> -->
+                        </ul>
+                    </div>
+
+                    <div class="afternoon list-card">
+                        <div class="header-period">
+                            <img src="src/assets/svg/icons/Cloud-Sun-4--Streamline-Solar.svg" alt="">
+                            <strong>Tarde</strong>
+                            <span>13h-18h</span>
+                        </div>
+                        <ul role="list" id="period-afternoon" class="clients">
+                            <!--  -->
+                        </ul>
+                    </div>
+
+                    <div class="night list-card">
+                        <div class="header-period">
+                            <img src="src/assets/svg/icons/Moon-Stars--Streamline-Solar.svg" alt="">
+                            <strong>Noite</strong>
+                            <span>19h-21h</span>
+                        </div>
+                        <ul role="list" id="period-night" class="clients">
+                            <!--  -->
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="btn-box">
+                    <button id="btn" class="btn" type="button">Novo agendamento</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <form class="modal d-none">
+        <img id="btn-close" src="src/assets/svg/icons/Close-Small-Fill--Streamline-Rounded-Fill---Material-Symbols.svg" alt="">
+        <div class="header-modal">
+            <h1>Agende um atendimento</h1>
+            <p>Preencha os dados do cliente para realizar o agendamento:</p>
+        </div>
+
+        <div class="schedule">
+            <fieldset>
+                <label for="tutor">Nome do tutor</label>
+                <div class="input">
+                    <img src="src/assets/svg/icons/User--Streamline-Solar.svg" alt="">
+                    <input type="text" required placeholder="Roberto" name="tutor" id="tutor">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <label for="pet">Nome do pet</label>
+                <div class="input">
+                    <img src="src/assets/svg/icons/Pet-Paw--Streamline-Core.svg" alt="">
+                    <input type="text" required placeholder="Faísca" name="pet" id="pet">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <label for="phone">Telefone</label>
+                <div class="input">
+                    <img src="src/assets/svg/icons/Phone--Streamline-Solar.svg" alt="">
+                    <input type="tel" required maxlength="15" placeholder="(00) 12345-5678" name="phone" id="phone">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <label for="description">Descrição do serviço</label>
+                <textarea required placeholder="Banho e tosa" name="description" id="description"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <label for="schedule-data">Data</label>
+                <div class="input">
+                    <img src="src/assets/svg/icons/Calendar-Minimalistic--Streamline-Solar.svg" alt="">
+                    <input type="date" required name="schedule-data" id="schedule-data">
+                    <img src="src/assets/svg/icons/arrow-down.svg" alt="">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <label for="schedule-time">Hora</label>
+                <div class="input">
+                    <img src="src/assets/svg/icons/Clock-Circle--Streamline-Solar.svg" alt="">
+                    <input type="time" required name="schedule-time" id="schedule-time">
+                    <img id="timer" src="src/assets/svg/icons/arrow-down.svg" alt="">
+                </div>
+            </fieldset>
+        </div>
+
+        <button id="submit" class="btn" type="submit">Agendar</button>
+    </form>
+
+
+    <script src="src/main.js"></script>
+</body>
+</html>
